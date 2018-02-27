@@ -12,6 +12,7 @@ import Cocoa
 class GithubViewController: NSViewController, GHConnectionDelegate {
     
     @IBOutlet weak var authContainer: NSView!
+    @IBOutlet weak var notificationContainer: NSView!
     
     var authManager: GHAuthManager!
     
@@ -39,9 +40,11 @@ class GithubViewController: NSViewController, GHConnectionDelegate {
     
     private func showAuthContainer() {
         authContainer.isHidden = false
+        notificationContainer.isHidden = true
     }
     
     private func showNotifContainer() {
         authContainer.isHidden = true
+        notificationContainer.isHidden = false
     }
 }

@@ -23,6 +23,10 @@
 		96E5F7492043173500A713D9 /* GHAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F7482043173500A713D9 /* GHAuthManager.swift */; };
 		96E5F74B2044729100A713D9 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F74A2044729100A713D9 /* GithubViewController.swift */; };
 		96E5F74D204472D100A713D9 /* GHAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F74C204472D100A713D9 /* GHAuthViewController.swift */; };
+		96E5F74F204548F300A713D9 /* GHNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F74E204548F300A713D9 /* GHNotificationViewController.swift */; };
+		96E5F7522045495500A713D9 /* GHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F7512045495500A713D9 /* GHTableViewCell.swift */; };
+		96E5F75420454A5100A713D9 /* GHNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F75320454A5100A713D9 /* GHNotification.swift */; };
+		96E5F75620454B4C00A713D9 /* GHNotificationWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F75520454B4C00A713D9 /* GHNotificationWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		96E5F7482043173500A713D9 /* GHAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAuthManager.swift; sourceTree = "<group>"; };
 		96E5F74A2044729100A713D9 /* GithubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		96E5F74C204472D100A713D9 /* GHAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAuthViewController.swift; sourceTree = "<group>"; };
+		96E5F74E204548F300A713D9 /* GHNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHNotificationViewController.swift; sourceTree = "<group>"; };
+		96E5F7512045495500A713D9 /* GHTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTableViewCell.swift; sourceTree = "<group>"; };
+		96E5F75320454A5100A713D9 /* GHNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHNotification.swift; sourceTree = "<group>"; };
+		96E5F75520454B4C00A713D9 /* GHNotificationWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHNotificationWebService.swift; sourceTree = "<group>"; };
 		99607C08637FCE190A0699D3 /* Pods_Tank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3647025FF6C3041001617D /* Pods-Tank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tank.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tank/Pods-Tank.release.xcconfig"; sourceTree = "<group>"; };
 		ECB87FB8ACA4D6684DE6B9EC /* Pods_TankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +190,7 @@
 		96E5F73C204308B500A713D9 /* github */ = {
 			isa = PBXGroup;
 			children = (
+				96E5F7502045492800A713D9 /* notifications */,
 				96E5F7472043170A00A713D9 /* auth */,
 				96E5F73D204308C700A713D9 /* webcast */,
 				96E5F74A2044729100A713D9 /* GithubViewController.swift */,
@@ -207,6 +216,17 @@
 				96E5F74C204472D100A713D9 /* GHAuthViewController.swift */,
 			);
 			path = auth;
+			sourceTree = "<group>";
+		};
+		96E5F7502045492800A713D9 /* notifications */ = {
+			isa = PBXGroup;
+			children = (
+				96E5F74E204548F300A713D9 /* GHNotificationViewController.swift */,
+				96E5F7512045495500A713D9 /* GHTableViewCell.swift */,
+				96E5F75320454A5100A713D9 /* GHNotification.swift */,
+				96E5F75520454B4C00A713D9 /* GHNotificationWebService.swift */,
+			);
+			path = notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,14 +523,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E5F75620454B4C00A713D9 /* GHNotificationWebService.swift in Sources */,
 				96E5F73F204309AA00A713D9 /* GHWebcastViewController.swift in Sources */,
 				96E5F7452043121000A713D9 /* WebcastsTableViewCell.swift in Sources */,
 				96E5F74120430A7400A713D9 /* Webcast.swift in Sources */,
 				96E5F7132042C3ED00A713D9 /* ViewController.swift in Sources */,
 				96E5F7112042C3ED00A713D9 /* AppDelegate.swift in Sources */,
+				96E5F75420454A5100A713D9 /* GHNotification.swift in Sources */,
 				96E5F74320430ABD00A713D9 /* WebcastParser.swift in Sources */,
 				96E5F74D204472D100A713D9 /* GHAuthViewController.swift in Sources */,
+				96E5F7522045495500A713D9 /* GHTableViewCell.swift in Sources */,
 				96E5F7492043173500A713D9 /* GHAuthManager.swift in Sources */,
+				96E5F74F204548F300A713D9 /* GHNotificationViewController.swift in Sources */,
 				96E5F74B2044729100A713D9 /* GithubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
