@@ -17,9 +17,11 @@ protocol WebcastParserDelegate {
 class WebcastParser {
     var delegate: WebcastParserDelegate?
     
+    let url = "https://resources.github.com/webcasts/"
+    
     func getWebcasts(delegate: WebcastParserDelegate) {
         self.delegate = delegate
-        Alamofire.request("https://resources.github.com/webcasts/").responseString { response in
+        Alamofire.request(url).responseString { response in
             if let html = response.result.value {
                 let webcasts = self.parseHTML(html: html)
                 delegate.parsed(webcasts: webcasts)
@@ -45,7 +47,7 @@ class WebcastParser {
                 webcasts.append(webcast)
             }
         } catch {
-            print("ERROR") // TODO
+            Issue(title: "WebcastParser - error while parsing the webcasts", body: "Url =\(url)").send()
         }
         return webcasts
     }

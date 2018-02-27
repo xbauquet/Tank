@@ -20,7 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, GHNotificationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
-            button.image = #imageLiteral(resourceName: "dark_tank")
             button.action = #selector(buttonAction(_:))
         }
         popover.contentViewController = ViewController.get()

@@ -30,6 +30,7 @@
 		96E5F7582045529A00A713D9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F7572045529A00A713D9 /* MenuViewController.swift */; };
 		96E5F75B2045570300A713D9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F75A2045570300A713D9 /* IconView.swift */; };
 		96E5F75D204557CC00A713D9 /* IconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E5F75C204557CC00A713D9 /* IconView.xib */; };
+		96E5F75F20455C1900A713D9 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F75E20455C1900A713D9 /* Issue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		96E5F7572045529A00A713D9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		96E5F75A2045570300A713D9 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		96E5F75C204557CC00A713D9 /* IconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconView.xib; sourceTree = "<group>"; };
+		96E5F75E20455C1900A713D9 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		99607C08637FCE190A0699D3 /* Pods_Tank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3647025FF6C3041001617D /* Pods-Tank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tank.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tank/Pods-Tank.release.xcconfig"; sourceTree = "<group>"; };
 		ECB87FB8ACA4D6684DE6B9EC /* Pods_TankTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TankTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,11 +170,12 @@
 				96E5F73C204308B500A713D9 /* github */,
 				96E5F7102042C3ED00A713D9 /* AppDelegate.swift */,
 				96E5F7122042C3ED00A713D9 /* ViewController.swift */,
+				96E5F7572045529A00A713D9 /* MenuViewController.swift */,
+				96E5F75E20455C1900A713D9 /* Issue.swift */,
 				96E5F7142042C3ED00A713D9 /* Assets.xcassets */,
 				96E5F7162042C3ED00A713D9 /* Main.storyboard */,
 				96E5F7192042C3ED00A713D9 /* Info.plist */,
 				96E5F71A2042C3ED00A713D9 /* Tank.entitlements */,
-				96E5F7572045529A00A713D9 /* MenuViewController.swift */,
 			);
 			path = Tank;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				96E5F7492043173500A713D9 /* GHAuthManager.swift in Sources */,
 				96E5F74F204548F300A713D9 /* GHNotificationViewController.swift in Sources */,
 				96E5F74B2044729100A713D9 /* GithubViewController.swift in Sources */,
+				96E5F75F20455C1900A713D9 /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
