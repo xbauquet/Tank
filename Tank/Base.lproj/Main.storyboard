@@ -708,20 +708,76 @@
                                     <segue destination="Ac0-EB-3qa" kind="embed" id="FEV-iE-Eaa"/>
                                 </connections>
                             </containerView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="k1K-9B-cIp">
+                                <rect key="frame" x="580" y="3" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="T48-ti-UYn"/>
+                                    <constraint firstAttribute="width" constant="17" id="vtT-F6-mh9"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="settings" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Bbt-dr-7BJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="menuAction:" target="XfG-lQ-9wD" id="ZOs-NL-nV9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="k1K-9B-cIp" secondAttribute="bottom" constant="3" id="A6z-95-mCj"/>
                             <constraint firstItem="wBS-88-rOn" firstAttribute="leading" secondItem="fiW-cy-na5" secondAttribute="trailing" constant="20" id="HoA-mP-Nuw"/>
                             <constraint firstAttribute="bottom" secondItem="fiW-cy-na5" secondAttribute="bottom" constant="20" id="MHH-lS-akk"/>
                             <constraint firstItem="fiW-cy-na5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ZaR-tz-H7u"/>
+                            <constraint firstAttribute="trailing" secondItem="k1K-9B-cIp" secondAttribute="trailing" constant="3" id="hz0-5r-mUB"/>
                             <constraint firstItem="fiW-cy-na5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="p1H-0K-7Ls"/>
                             <constraint firstAttribute="bottom" secondItem="wBS-88-rOn" secondAttribute="bottom" constant="20" id="ydG-RP-qCf"/>
                             <constraint firstItem="wBS-88-rOn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="zhv-QH-LBb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="menuButton" destination="k1K-9B-cIp" id="Hns-EV-Vzw"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="543"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="ajJ-eS-ho9">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="hgT-rY-HX2" customClass="MenuViewController" customModule="Tank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="sze-Dw-msG">
+                        <rect key="frame" x="0.0" y="0.0" width="188" height="68"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mrc-7k-4K0">
+                                <rect key="frame" x="3" y="30" width="183" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Disconnect from github" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DRJ-fe-0hL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="disconnectGHAction:" target="hgT-rY-HX2" id="Cay-LD-YMY"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-EK-RSI">
+                                <rect key="frame" x="3" y="3" width="183" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WcD-gF-OJY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeAction:" target="hgT-rY-HX2" id="7tK-fr-2Ii"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="lCb-bJ-PqK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="644"/>
         </scene>
         <!--Webcast View Controller-->
         <scene sceneID="x0Q-ig-73z">
@@ -1147,4 +1203,7 @@
             <point key="canvasLocation" x="124" y="1392.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>
