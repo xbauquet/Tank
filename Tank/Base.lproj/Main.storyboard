@@ -687,7 +687,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="Tank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="689" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="fiW-cy-na5" userLabel="webcasts">
@@ -699,17 +699,29 @@
                                     <segue destination="qbR-IK-Ui6" kind="embed" id="wxM-E9-yj4"/>
                                 </connections>
                             </containerView>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="wBS-88-rOn">
+                                <rect key="frame" x="310" y="20" width="270" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="aQU-kG-eFw"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Ac0-EB-3qa" kind="embed" id="FEV-iE-Eaa"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="wBS-88-rOn" firstAttribute="leading" secondItem="fiW-cy-na5" secondAttribute="trailing" constant="20" id="HoA-mP-Nuw"/>
                             <constraint firstAttribute="bottom" secondItem="fiW-cy-na5" secondAttribute="bottom" constant="20" id="MHH-lS-akk"/>
                             <constraint firstItem="fiW-cy-na5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ZaR-tz-H7u"/>
                             <constraint firstItem="fiW-cy-na5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="p1H-0K-7Ls"/>
+                            <constraint firstAttribute="bottom" secondItem="wBS-88-rOn" secondAttribute="bottom" constant="20" id="ydG-RP-qCf"/>
+                            <constraint firstItem="wBS-88-rOn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="zhv-QH-LBb"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="185" y="543"/>
         </scene>
         <!--Webcast View Controller-->
         <scene sceneID="x0Q-ig-73z">
@@ -854,7 +866,125 @@
                 </viewController>
                 <customObject id="jlu-lz-8fV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="1095"/>
+            <point key="canvasLocation" x="-344" y="979"/>
+        </scene>
+        <!--Github View Controller-->
+        <scene sceneID="IIE-hO-4mb">
+            <objects>
+                <viewController id="Ac0-EB-3qa" customClass="GithubViewController" customModule="Tank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="OPf-Cs-ccl">
+                        <rect key="frame" x="0.0" y="0.0" width="270" height="230"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="gcz-KC-05G">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="207"/>
+                                <connections>
+                                    <segue destination="Y5S-H3-kSI" kind="embed" id="EM6-8L-7QJ"/>
+                                </connections>
+                            </containerView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TYu-6t-92w">
+                                <rect key="frame" x="-2" y="211" width="274" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Github" id="9rB-bG-0am">
+                                    <font key="font" metaFont="systemBold" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gcz-KC-05G" secondAttribute="trailing" id="5Jh-Aw-5Ug"/>
+                            <constraint firstItem="gcz-KC-05G" firstAttribute="leading" secondItem="OPf-Cs-ccl" secondAttribute="leading" id="YxQ-9B-FWF"/>
+                            <constraint firstItem="TYu-6t-92w" firstAttribute="leading" secondItem="OPf-Cs-ccl" secondAttribute="leading" id="dLz-X9-HNX"/>
+                            <constraint firstItem="gcz-KC-05G" firstAttribute="top" secondItem="TYu-6t-92w" secondAttribute="bottom" constant="4" id="l49-WC-ZeO"/>
+                            <constraint firstAttribute="bottom" secondItem="gcz-KC-05G" secondAttribute="bottom" id="npv-Ob-Ffn"/>
+                            <constraint firstAttribute="trailing" secondItem="TYu-6t-92w" secondAttribute="trailing" id="qdm-2V-4rE"/>
+                            <constraint firstItem="TYu-6t-92w" firstAttribute="top" secondItem="OPf-Cs-ccl" secondAttribute="top" id="ycp-Qd-Yay"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authContainer" destination="gcz-KC-05G" id="fDB-qZ-MdL"/>
+                    </connections>
+                </viewController>
+                <customObject id="Huc-px-1Ix" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="979"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="cXL-PQ-aR1">
+            <objects>
+                <viewController id="Y5S-H3-kSI" customClass="GHAuthViewController" customModule="Tank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="pQ6-Zp-n5C">
+                        <rect key="frame" x="0.0" y="0.0" width="270" height="207"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box boxType="custom" borderWidth="0.0" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-qp-ClO">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="207"/>
+                                <view key="contentView" id="3NZ-qF-vLw">
+                                    <rect key="frame" x="0.0" y="0.0" width="270" height="207"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3Y-1f-C7l">
+                                            <rect key="frame" x="9" y="125" width="253" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2tU-zZ-Xaf">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-sd-Sjk">
+                                            <rect key="frame" x="9" y="162" width="255" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add your github token here" drawsBackground="YES" id="Yv1-wq-joE">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="McF-Oe-1KI">
+                                            <rect key="frame" x="59" y="83" width="155" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Ok" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="czu-8V-Pu4">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="okAction:" target="Y5S-H3-kSI" id="I3C-yD-XVK"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oo9-m5-VG8">
+                                            <rect key="frame" x="58" y="3" width="155" height="32"/>
+                                            <buttonCell key="cell" type="push" title="How to get a token" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i2o-U2-XIl">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="howToAction:" target="Y5S-H3-kSI" id="Zs7-DN-uPo"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Oo9-m5-VG8" secondAttribute="bottom" constant="10" id="UYb-j9-Hqb"/>
+                                        <constraint firstItem="Oo9-m5-VG8" firstAttribute="centerX" secondItem="3NZ-qF-vLw" secondAttribute="centerX" id="w3e-dB-uwF"/>
+                                    </constraints>
+                                </view>
+                                <color key="fillColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rjG-qp-ClO" secondAttribute="trailing" id="D20-Jy-7mm"/>
+                            <constraint firstItem="rjG-qp-ClO" firstAttribute="leading" secondItem="pQ6-Zp-n5C" secondAttribute="leading" id="FzP-ZA-ddz"/>
+                            <constraint firstAttribute="bottom" secondItem="rjG-qp-ClO" secondAttribute="bottom" id="mGv-qJ-TbB"/>
+                            <constraint firstItem="rjG-qp-ClO" firstAttribute="top" secondItem="pQ6-Zp-n5C" secondAttribute="top" id="vob-w4-wUO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tokenField" destination="J3Y-1f-C7l" id="QEy-qk-eVQ"/>
+                    </connections>
+                </viewController>
+                <customObject id="b5R-Ef-c2q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="1393"/>
         </scene>
     </scenes>
 </document>
