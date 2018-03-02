@@ -26,19 +26,11 @@ class WebcastsTableViewCell: NSTableCellView {
         dateLabel.stringValue = webcast.date!
         titleLabel.stringValue = webcast.title!
         url = webcast.url
-        let gesture = NSClickGestureRecognizer(target: self, action: #selector(tap(_:)))
-        self.addGestureRecognizer(gesture)
     }
     
     var cursor = NSCursor.openHand
     
     open override func resetCursorRects() {
         addCursorRect(self.bounds, cursor: cursor)
-    }
-    
-    @objc func tap(_ sender: NSClickGestureRecognizer) {
-        if let url = URL(string: "https://resources.github.com" + self.url!){
-            NSWorkspace.shared.open(url)
-        }
     }
 }

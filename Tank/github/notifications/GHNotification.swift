@@ -15,6 +15,18 @@ class GHNotification {
     var time: String?
     var url: String?
     
+    static func dummy() -> GHNotification {
+        let item = GHNotification()
+        item.repo = "Dummy"
+        item.title = "Dummy"
+        item.type = "Dummy"
+        item.time = "Dummy"
+        item.url = "Dummy"
+        return item
+    }
+    
+    init() {}
+    
     init(notif: [String:Any]) {
         if let time = notif["updated_at"] as? String {
             self.time = time

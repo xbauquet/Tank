@@ -44,4 +44,11 @@ class GHWebcastViewController: NSViewController, NSTableViewDataSource, NSTableV
         self.webcasts = webcasts
         self.tableView.reloadData()
     }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let webcast = webcasts[tableView.selectedRow]
+        if let url = URL(string: "https://resources.github.com" + webcast.url!){
+            NSWorkspace.shared.open(url)
+        }
+    }
 }

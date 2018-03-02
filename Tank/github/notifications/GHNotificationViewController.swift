@@ -29,8 +29,7 @@ class GHNotificationViewController: NSViewController, GHNotificationDelegate, NS
     }
     
     func onFailure(_ error: Error?) {
-        notifications = [GHNotification]()
-        self.tableView.reloadData()
+        found(notifications: [GHNotification]())
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -43,5 +42,15 @@ class GHNotificationViewController: NSViewController, GHNotificationDelegate, NS
             return cell
         }
         return NSTableCellView()
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 80
+    }
+
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if let url = URL(string: "https://github.com/notifications"){
+            NSWorkspace.shared.open(url)
+        }
     }
 }

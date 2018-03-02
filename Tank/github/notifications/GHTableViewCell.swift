@@ -21,19 +21,11 @@ class GHTableViewCell: NSTableCellView {
         title.stringValue = notification.repo!
         date.stringValue = notification.time!
         body.stringValue = notification.title!
-        let gesture = NSClickGestureRecognizer(target: self, action: #selector(tap(_:)))
-        self.addGestureRecognizer(gesture)
     }
     
     var cursor = NSCursor.openHand
     
     open override func resetCursorRects() {
         addCursorRect(self.bounds, cursor: cursor)
-    }
-    
-    @objc func tap(_ sender: NSClickGestureRecognizer) {
-        if let url = URL(string: self.url){
-            NSWorkspace.shared.open(url)
-        }
     }
 }
