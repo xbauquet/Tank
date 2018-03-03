@@ -1,2 +1,4 @@
 language: swift
 os: osx
+before_install:
+  - pod repo update
