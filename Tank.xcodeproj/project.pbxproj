@@ -10,11 +10,12 @@
 		0C6B1C2C8F4FA001F75B4A8B /* Pods_Tank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99607C08637FCE190A0699D3 /* Pods_Tank.framework */; };
 		45891E243F752D329E6707F7 /* Pods_TankUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7742A359A0CE62FAA31D083B /* Pods_TankUITests.framework */; };
 		8CF34AAF85980D632165433B /* Pods_TankTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB87FB8ACA4D6684DE6B9EC /* Pods_TankTests.framework */; };
+		9621355D2049BF1F00199175 /* WebcastParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9621355C2049BF1F00199175 /* WebcastParserTests.swift */; };
+		96213567204AA2CB00199175 /* WebcastParserIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96213566204AA2CB00199175 /* WebcastParserIntegrationTests.swift */; };
 		96E5F7112042C3ED00A713D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F7102042C3ED00A713D9 /* AppDelegate.swift */; };
 		96E5F7132042C3ED00A713D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F7122042C3ED00A713D9 /* ViewController.swift */; };
 		96E5F7152042C3ED00A713D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E5F7142042C3ED00A713D9 /* Assets.xcassets */; };
 		96E5F7182042C3ED00A713D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E5F7162042C3ED00A713D9 /* Main.storyboard */; };
-		96E5F7242042C3ED00A713D9 /* TankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F7232042C3ED00A713D9 /* TankTests.swift */; };
 		96E5F72F2042C3ED00A713D9 /* TankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F72E2042C3ED00A713D9 /* TankUITests.swift */; };
 		96E5F73F204309AA00A713D9 /* GHWebcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F73E204309AA00A713D9 /* GHWebcastViewController.swift */; };
 		96E5F74120430A7400A713D9 /* Webcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E5F74020430A7400A713D9 /* Webcast.swift */; };
@@ -57,6 +58,8 @@
 		713325FAEA72500D14802C6E /* Pods-TankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TankTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TankTests/Pods-TankTests.release.xcconfig"; sourceTree = "<group>"; };
 		7249A558C5293285692CB334 /* Pods-TankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TankUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TankUITests/Pods-TankUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7742A359A0CE62FAA31D083B /* Pods_TankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9621355C2049BF1F00199175 /* WebcastParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcastParserTests.swift; sourceTree = "<group>"; };
+		96213566204AA2CB00199175 /* WebcastParserIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebcastParserIntegrationTests.swift; sourceTree = "<group>"; };
 		96E5F70D2042C3ED00A713D9 /* Tank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E5F7102042C3ED00A713D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E5F7122042C3ED00A713D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		96E5F7192042C3ED00A713D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E5F71A2042C3ED00A713D9 /* Tank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tank.entitlements; sourceTree = "<group>"; };
 		96E5F71F2042C3ED00A713D9 /* TankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96E5F7232042C3ED00A713D9 /* TankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankTests.swift; sourceTree = "<group>"; };
 		96E5F7252042C3ED00A713D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E5F72A2042C3ED00A713D9 /* TankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E5F72E2042C3ED00A713D9 /* TankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankUITests.swift; sourceTree = "<group>"; };
@@ -183,8 +185,9 @@
 		96E5F7222042C3ED00A713D9 /* TankTests */ = {
 			isa = PBXGroup;
 			children = (
-				96E5F7232042C3ED00A713D9 /* TankTests.swift */,
 				96E5F7252042C3ED00A713D9 /* Info.plist */,
+				9621355C2049BF1F00199175 /* WebcastParserTests.swift */,
+				96213566204AA2CB00199175 /* WebcastParserIntegrationTests.swift */,
 			);
 			path = TankTests;
 			sourceTree = "<group>";
@@ -567,7 +570,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E5F7242042C3ED00A713D9 /* TankTests.swift in Sources */,
+				9621355D2049BF1F00199175 /* WebcastParserTests.swift in Sources */,
+				96213567204AA2CB00199175 /* WebcastParserIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
