@@ -6,8 +6,10 @@ before_install:
   - pod repo update
 script:
   - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests build-for-testing -quiet
-  - xctool -workspace Tank.xcworkspace -scheme TankAndTests run-tests
+  - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests -sdk macosx -quiet -enableCodeCoverage YES build test
 notifications:
   email:
     on_success: never
     on_failure: change
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -cF osx -t 0f1ea0cd-5c64-4dff-a279-017055965478
