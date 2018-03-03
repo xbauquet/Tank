@@ -1,15 +1,14 @@
 language: swift
-osx_image: xcode9.3beta
+osx_image: xcode9.2
 xcode_workspace: Tank.xcworkspace
 xcode_scheme: TankAndTests
 before_install:
   - pod repo update
 script:
-  - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests build-for-testing -quiet
-  - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests -sdk macosx -quiet -enableCodeCoverage YES build test
+  - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests -quiet -enableCodeCoverage YES build test
 notifications:
   email:
     on_success: never
     on_failure: change
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -cF osx -t 0f1ea0cd-5c64-4dff-a279-017055965478
+  - bash <(curl -s https://codecov.io/bash)
