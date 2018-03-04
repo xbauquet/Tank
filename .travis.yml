@@ -7,7 +7,9 @@ before_install:
 script:
   - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests -quiet -enableCodeCoverage YES build test
 notifications:
-  email:
+  slack:
+    rooms:
+      - ailurusworkspace:Gjchyw98WhkfwHdNgMBG1vEl#tank
     on_success: never
     on_failure: change
 after_success:
