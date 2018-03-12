@@ -16,7 +16,15 @@ protocol GHNotificationDelegate: NSObjectProtocol {
 class GHNotificationWebService: NSObject {
     private static var delegates = [GHNotificationDelegate]()
     
-    private static let time = 60.0 // 1 min
+    private static var lastCall: String?
+    // 1 min
+    private static var time = 60.0 {
+        didSet {
+            GHNotificationWebService.timer?.invalidate()
+            GHNotificationWebService.timer = Timer.scheduledTimer(timeInterval: GHNotificationWebService.time, target: self, selector: #selector(start), userInfo: nil, repeats: true)
+        }
+    }
+    
     private static var timer: Timer?
     private static var notifications = [GHNotification]()
     private var authManager = GHAuthManager()
@@ -51,6 +59,7 @@ class GHNotificationWebService: NSObject {
     }
     
     func get(token:String, url: String) {
+        print("GET*******" + Date().description)
         URLCache.shared.removeAllCachedResponses()
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
@@ -59,6 +68,10 @@ class GHNotificationWebService: NSObject {
         var request = URLRequest(url: URL)
         request.httpMethod = "GET"
         request.addValue("token " + token, forHTTPHeaderField: "Authorization")
+        if let lastCall = GHNotificationWebService.lastCall {
+            request.addValue("If-Modified-Since", forHTTPHeaderField: lastCall)
+        }
+        
         let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             if error == nil {
                 let json = self.dataToJson(data)
@@ -66,6 +79,11 @@ class GHNotificationWebService: NSObject {
                     self.onFailure(nil)
                     return
                 }
+                GHNotificationWebService.lastCall = httpUrlResponse.allHeaderFields["Date"] as? String
+                if let interval = httpUrlResponse.allHeaderFields["X-Poll-Interval"] as? Double, interval != GHNotificationWebService.time {
+                    GHNotificationWebService.time = interval
+                }
+
                 self.onSuccess(json: json, response: httpUrlResponse)
             } else {
                 self.onFailure(error)
