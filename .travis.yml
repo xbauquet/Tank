@@ -5,7 +5,9 @@ xcode_scheme: TankAndTests
 before_install:
   - pod repo update
 script:
-  - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests -quiet -enableCodeCoverage YES build test
+  - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests -enableCodeCoverage YES build test
+  - xcodebuild -workspace Tank.xcworkspace -scheme TankRelease build
+  - ls /Users/travis/Library/Developer/Xcode/DerivedData/Tank-*/Build/Products/Release/Tank.app
 notifications:
   slack:
     rooms:
@@ -14,3 +16,15 @@ notifications:
     on_failure: change
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "Xavier Bauquet"
+  - git config --local user.email "xavier.bauquet@gmail.com"
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_TOKEN
+  file: "/Users/travis/Library/Developer/Xcode/DerivedData/Tank-*/Build/Products/Release/Tank.app"
+  skip_cleanup: true
+  on:
+    tags: true
