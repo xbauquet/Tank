@@ -1,13 +1,13 @@
 language: swift
 osx_image: xcode9.2
-xcode_workspace: Tank.xcworkspace
-xcode_scheme: TankAndTests
+
+env:
+  - APP_PATH=""
 before_install:
   - pod repo update
 script:
   - xcodebuild -workspace Tank.xcworkspace -scheme TankAndTests -enableCodeCoverage YES build test
   - xcodebuild -workspace Tank.xcworkspace -scheme TankRelease build
-  - ls /Users/travis/Library/Developer/Xcode/DerivedData/Tank-*/Build/Products/Release/Tank.app
 notifications:
   slack:
     rooms:
@@ -17,14 +17,15 @@ notifications:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 before_deploy:
-  # Set up git user name and tag this commit
   - git config --local user.name "Xavier Bauquet"
   - git config --local user.email "xavier.bauquet@gmail.com"
+  - cp -r /Users/travis/Library/Developer/Xcode/DerivedData/Tank-*/Build/Products/Release/Tank.app .
+  - zip -r Tank.zip Tank.app
 deploy:
   provider: releases
   api_key:
     secure: $GITHUB_TOKEN
-  file: "/Users/travis/Library/Developer/Xcode/DerivedData/Tank-*/Build/Products/Release/Tank.app"
+  file: "Tank.zip"
   skip_cleanup: true
   on:
     tags: true
